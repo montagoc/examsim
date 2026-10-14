@@ -1,2 +1,15 @@
-research/
-analysis/
+# Binaries
+/examsim
+*.exe
+
+# Build artifacts
+dist/
+
+# Local session files (contain your answers)
+/.sessions/
+
+# Editor / OS noise
+.idea/
+.vscode/
+*.swp
+.DS_Store

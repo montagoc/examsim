@@ -1,0 +1,86 @@
+Sample Linux Basics — examsim demo exam
+
+QUESTION 1
+Topic: Filesystem
+
+Which command shows disk usage of the current directory's subdirectories,
+summarized one line each?
+
+A. df -h
+B. du -sh *
+C. ls -lh
+D. du -d 0
+
+Correct Answer: B
+Explanation: du reports disk usage; -s summarizes each argument and -h makes
+it human-readable. df shows filesystem-level usage instead.
+
+QUESTION 2
+Topic: Permissions
+
+A file has mode 640. Which statement is true?
+
+A. Everyone can read it
+B. The owner can read and write; the group can read; others have no access
+C. The owner can execute it
+D. The group can write to it
+
+Correct Answer: B
+Explanation: 6 = rw- for owner, 4 = r-- for group, 0 = --- for others.
+
+QUESTION 3
+Topic: Networking
+
+Which command lists listening TCP sockets and the processes behind them?
+
+A. ip addr show
+B. ss -tlnp
+C. ping -c 4 localhost
+D. traceroute example.com
+
+Correct Answer: B
+Explanation: ss -tlnp shows TCP (-t) listening (-l) sockets numerically (-n)
+with process info (-p).
+
+QUESTION 4
+Topic: Process management
+
+You need to find which process is using the most memory right now.
+Which approaches work? (Select all that apply)
+
+A. top, then press M to sort by memory
+B. ps aux --sort=-%mem | head
+C. free -h
+D. kill -9 1
+
+Correct Answer: A, B
+Explanation: top sorted by %MEM and ps sorted by -%mem both surface the top
+memory consumers. free shows totals, not per-process. Never kill PID 1.
+
+QUESTION 5
+Topic: SSH
+
+Which sshd_config setting disables password authentication entirely?
+
+A. PermitRootLogin no
+B. PasswordAuthentication no
+C. ChallengeResponseAuthentication no
+D. PubkeyAuthentication yes
+
+Correct Answer: B
+Explanation: PasswordAuthentication no turns off password auth; combine with
+PubkeyAuthentication yes for key-only access.
+
+QUESTION 6
+Topic: Scripting
+
+In bash, what does $# expand to inside a script?
+
+A. The script's filename
+B. The process ID of the script
+C. The number of positional arguments passed to the script
+D. The exit status of the last command
+
+Correct Answer: C
+Explanation: $# is the argument count; $0 is the script name, $$ is the PID,
+and $? is the last exit status.
